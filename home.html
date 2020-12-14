@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- 引入样式文件 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link
+		  rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/vant@2.11/lib/index.css"/>
+		<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vant@2.11/lib/vant.min.js"></script>
+		<link rel="stylesheet" href="css/home.css" />
+	</head>
+	<body>
+		<div id="app">
+			<!-- 顶部导航 -->
+			<van-nav-bar title="MaDouTv"></van-nav-bar>
+			<!-- 搜索框 -->
+			<form action="/">
+			  <van-search
+			    v-model="value"
+			    placeholder="请输入搜索关键词"
+			  ></van-search>
+			</form>
+			<div id="content">
+				<ul>
+					<li>
+						<img src="img/11.gif" />
+						<div class="desc">
+							<h3>震惊！！！！居然这震惊！！！！居然这震惊！！！！居然这</h3>
+							<div>
+								作者：XXX
+								播放：333
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="img/11.gif" />
+						<div class="desc">
+							<h3>震惊！！！！居然这个样子</h3>
+							<div>
+								作者：XXX
+								播放：333
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 底部导航 -->
+			<van-tabbar v-model="active">
+			  <van-tabbar-item icon="home-o">主页</van-tabbar-item>
+			  <van-tabbar-item icon="bars" url="classify.html">分类</van-tabbar-item>
+			  <van-tabbar-item icon="manager-o" url="mine.html">我的</van-tabbar-item>
+			</van-tabbar>
+		</div>
+		<script>
+		  // 在 #app 标签下渲染一个按钮组件
+		  new Vue({
+		    el: '#app',
+		    // template: `<van-button>按钮</van-button>`,
+			data: {
+			  active: 0,
+			  value:"2"
+			}
+		  });
+		
+		  
+		</script>
+	</body>
+</html>

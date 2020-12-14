@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- 引入样式文件 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link
+		  rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/vant@2.11/lib/index.css"/>
+		<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vant@2.11/lib/vant.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 顶部导航 -->
+			<van-nav-bar title="我的"></van-nav-bar>
+			
+			<!-- 底部导航 -->
+			<van-tabbar v-model="active">
+			  <van-tabbar-item icon="home-o" url="home.html">主页</van-tabbar-item>
+			  <van-tabbar-item icon="bars" url="classify.html">分类</van-tabbar-item>
+			  <van-tabbar-item icon="manager-o">我的</van-tabbar-item>
+			</van-tabbar>
+		</div>
+		<script>
+		  // 在 #app 标签下渲染一个按钮组件
+		  new Vue({
+		    el: '#app',
+		    // template: `<van-button>按钮</van-button>`,
+			data: {
+			  active: 2,
+			  value:"2"
+			}
+		  });
+		
+		  
+		</script>
+	</body>
+</html>
